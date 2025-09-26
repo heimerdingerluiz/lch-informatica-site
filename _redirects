@@ -1,1 +1,8 @@
-/*    /index.html   200
+# Single Page Apps for GitHub Pages
+# https://github.com/rafgraph/spa-github-pages
+#
+# This file is for a SPA that uses client-side routing (e.g., React Router, Vue Router, etc.).
+# It ensures that all requests are redirected to index.html for client-side routing to work.
+
+# Redirect all requests to index.html, preserving the path and query parameters
+/* /index.html 200
