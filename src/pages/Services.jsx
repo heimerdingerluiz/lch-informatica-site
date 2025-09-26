@@ -1,7 +1,7 @@
 import { Box, Container, Heading, SimpleGrid, Text, VStack, useColorModeValue, List, ListItem, ListIcon, Button, Flex } from '@chakra-ui/react';
 import { FaCheckCircle, FaTools, FaVideo, FaShieldAlt, FaLaptopHouse, FaServer, FaNetworkWired, FaDatabase } from 'react-icons/fa';
 import { Link as RouterLink } from 'react-router-dom';
-import ServiceSlider from '../components/ServiceSlider';
+import ServiceImageSlider from '../components/ServiceImageSlider';
 
 const services = [
   {
@@ -146,9 +146,8 @@ const Services = () => {
           <VStack spacing={6} w="full">
             <Heading as="h2" size="lg" textAlign="center">Serviços Recentes</Heading>
             <Box w="full" maxW="container.lg" mx="auto">
-              <ServiceSlider
+              <ServiceImageSlider
                 height={{ base: '180px', md: '320px' }}
-                images={['/servicos/servico1.jpg','/servicos/servico2.jpg','/servicos/servico3.jpg']}
                 fit="contain"
                 bg="gray.100"
                 backdrop

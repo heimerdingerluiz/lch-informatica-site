@@ -1,7 +1,7 @@
 import { Box, Button, Container, Flex, Heading, Stack, Text, useColorModeValue, VStack, SimpleGrid, Icon, Grid, GridItem } from '@chakra-ui/react';
 import { FaTools, FaVideo, FaShieldAlt, FaLaptopHouse, FaShoppingCart } from 'react-icons/fa';
 import { Link as RouterLink } from 'react-router-dom';
-import ServiceSlider from '../components/ServiceSlider';
+import ServiceImageSlider from '../components/ServiceImageSlider';
 
 const services = [
   {
@@ -65,13 +65,8 @@ const Home = () => {
               </VStack>
             </GridItem>
             <GridItem display={{ base: 'none', md: 'block' }}>
-              <ServiceSlider
+              <ServiceImageSlider
                 height="360px"
-                images={[
-                  '/servicos/servico1.jpg?v=2',
-                  '/servicos/servico2.jpg?v=2',
-                  '/servicos/servico3.jpg?v=2'
-                ]}
                 fit="contain"
                 bg="gray.100"
                 backdrop
