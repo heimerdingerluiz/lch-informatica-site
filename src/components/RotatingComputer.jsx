@@ -13,16 +13,23 @@ const RotatingComputer = ({ isVisible }) => {
       top="50%"
       left="50%"
       transform="translate(-50%, -50%)"
-      w="60%"
-      h="60%"
-      backgroundImage="url('https://i.imgur.com/9yS4y2n.png')"
-      backgroundSize="contain"
-      backgroundRepeat="no-repeat"
-      backgroundPosition="center"
-      animation={`${rotate} 20s linear infinite`}
+      width="200px"
+      height="200px"
+      zIndex={10}
       opacity={isVisible ? 1 : 0}
       transition="opacity 0.6s ease"
-    />
+    >
+      <Box
+        as="img"
+        src="https://i.imgur.com/9yS4y2n.png"
+        alt="Computador girando"
+        width="100%"
+        height="100%"
+        objectFit="contain"
+        animation={`${rotate} 20s linear infinite`}
+        transformOrigin="center center"
+      />
+    </Box>
   );
 };
 

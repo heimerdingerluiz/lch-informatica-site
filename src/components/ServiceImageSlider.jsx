@@ -69,7 +69,7 @@ export default function ServiceImageSlider({
               transition="opacity 0.6s ease"
             />
           )}
-          <Box position="relative" w="100%" h="100%">
+          <Box position="relative" w="100%" h="100%" overflow="hidden">
             <Image
               src={src}
               alt={`Serviço ${i + 1}`}
@@ -83,8 +83,12 @@ export default function ServiceImageSlider({
               transition="opacity 0.6s ease"
               loading="lazy"
             />
-            {/* Computador com animação de rotação */}
-            {i === 0 && <RotatingComputer isVisible={i === index} />}
+            {/* Computador com animação de rotação - apenas na primeira imagem */}
+            {i === 0 && (
+              <Box position="absolute" top={0} left={0} w="100%" h="100%">
+                <RotatingComputer isVisible={i === index} />
+              </Box>
+            )}
           </Box>
         </Box>
       ))}
