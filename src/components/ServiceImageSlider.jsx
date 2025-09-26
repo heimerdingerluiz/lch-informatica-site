@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Box, HStack, IconButton, Image, useColorModeValue } from '@chakra-ui/react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import RotatingComputer from './RotatingComputer';
 
 // Importando as imagens diretamente
 import servico1 from '../assets/servico1.jpg';
@@ -63,26 +64,28 @@ export default function ServiceImageSlider({
               bgImage={`url(${src})`}
               bgSize="cover"
               bgPos="center"
-              filter="blur(14px)"
               transform="scale(1.08)"
               opacity={i === index ? 0.6 : 0}
               transition="opacity 0.6s ease"
             />
           )}
-          <Image
-            src={src}
-            alt={`Serviço ${i + 1}`}
-            position="absolute"
-            inset={0}
-            w="100%"
-            h="100%"
-            objectFit={fit}
-            objectPosition="center"
-            opacity={i === index ? 1 : 0}
-            transform={i === index ? 'scale(1)' : (fit === 'contain' ? 'scale(1)' : 'scale(1.02)')}
-            transition="opacity 0.6s ease, transform 0.8s ease"
-            loading="lazy"
-          />
+          <Box position="relative" w="100%" h="100%">
+            <Image
+              src={src}
+              alt={`Serviço ${i + 1}`}
+              position="absolute"
+              inset={0}
+              w="100%"
+              h="100%"
+              objectFit={fit}
+              objectPosition="center"
+              opacity={i === index ? 1 : 0}
+              transition="opacity 0.6s ease"
+              loading="lazy"
+            />
+            {/* Computador com animação de rotação */}
+            {i === 0 && <RotatingComputer isVisible={i === index} />}
+          </Box>
         </Box>
       ))}
       
