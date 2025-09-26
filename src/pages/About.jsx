@@ -37,7 +37,6 @@ const values = [
   {
     icon: FaHandshake,
     title: 'Compromisso',
-    title: 'Compromisso',
     description: 'Cumprimos prazos e mantemos nossa palavra em todos os serviços prestados.'
   },
   {

@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Box, HStack, IconButton, Image, useColorModeValue } from '@chakra-ui/react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import RotatingComputer from './RotatingComputer';
 
 // Importando as imagens diretamente
 import servico1 from '../assets/servico1.jpg';
@@ -83,12 +82,6 @@ export default function ServiceImageSlider({
               transition="opacity 0.6s ease"
               loading="lazy"
             />
-            {/* Computador com animação de rotação - apenas na primeira imagem */}
-            {i === 0 && (
-              <Box position="absolute" top={0} left={0} w="100%" h="100%">
-                <RotatingComputer isVisible={i === index} />
-              </Box>
-            )}
           </Box>
         </Box>
       ))}
